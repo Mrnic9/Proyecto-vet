@@ -1,0 +1,6 @@
+com\example\CrudSpringBoot\interfaceService\IPersonaService.class
+com\example\CrudSpringBoot\service\PersonaService.class
+com\example\CrudSpringBoot\modelo\Persona.class
+com\example\CrudSpringBoot\interfaces\IPersona.class
+com\example\CrudSpringBoot\controler\Controler.class
+com\example\CrudSpringBoot\CrudSpringBootApplication.class
