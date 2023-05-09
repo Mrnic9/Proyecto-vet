@@ -27,31 +27,31 @@ public class ControlerMascota {
     public String listar(Model model){
         List<Mascota> mascotas= service.listar();
         model.addAttribute("mascotas", mascotas);
-        return "index";
+        return "consulta";
     }
 
     @GetMapping("/new")
     public String agregar(Model model){
         model.addAttribute("mascota", new Mascota());
-        return "form";
+        return "consulta";
     }
 
     @PostMapping("/save")
     public String save(@Validated Mascota p){
         service.save(p);
-        return "redirect:/listar";
+        return "registro";
     }
 
     @GetMapping("/editar/{id}")
     public String editar(@PathVariable int id, Model model){
         Optional<Mascota> mascota = service.listarId(id);
         model.addAttribute("mascota", mascota);
-        return "form";
+        return "registro";
     }
 
     @GetMapping("/eliminar/{id}")
     public String delete(@PathVariable int id){
         service.delete(id);
-        return "redirect:/listar";
+        return "registros";
     }
 }

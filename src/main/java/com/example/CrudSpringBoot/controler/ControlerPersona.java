@@ -23,35 +23,35 @@ public class ControlerPersona {
     private IPersonaService service;
 
 
-    @GetMapping("/listar")
+    @GetMapping("/listarper")
     public String listar(Model model){
         List<Persona> personas= service.listar();
         model.addAttribute("personas", personas);
-        return "index";
+        return "registro";
     }
 
     @GetMapping("/new")
     public String agregar(Model model){
         model.addAttribute("persona", new Persona());
-        return "form";
+        return "consulta";
     }
 
     @PostMapping("/save")
     public String save(@Validated Persona p){
         service.save(p);
-        return "redirect:/listar";
+        return "redirect:/listarper";
     }
 
     @GetMapping("/editar/{id}")
     public String editar(@PathVariable int id, Model model){
         Optional<Persona> persona = service.listarId(id);
         model.addAttribute("persona", persona);
-        return "form";
+        return "registro";
     }
 
     @GetMapping("/eliminar/{id}")
     public String delete(@PathVariable int id){
         service.delete(id);
-        return "redirect:/listar";
+        return "consulta";
     }
 }

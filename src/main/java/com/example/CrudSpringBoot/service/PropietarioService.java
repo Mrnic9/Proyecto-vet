@@ -1,8 +1,5 @@
 package com.example.CrudSpringBoot.service;
 
-import com.example.CrudSpringBoot.interfaceService.IPropietarioService;
-import com.example.CrudSpringBoot.interfaces.IPropietario;
-import com.example.CrudSpringBoot.modelo.Propietario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

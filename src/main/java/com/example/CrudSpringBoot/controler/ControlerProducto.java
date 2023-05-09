@@ -42,7 +42,7 @@ public class ControlerProducto {
         @PostMapping("/save")
         public String save(@Validated Producto p){
             service.save(p);
-            return "redirect:/listar";
+            return "carrito";
         }
 
         @GetMapping("/editar/{id}")
@@ -55,7 +55,7 @@ public class ControlerProducto {
         @GetMapping("/eliminar/{id}")
         public String delete(@PathVariable int id){
             service.delete(id);
-            return "redirect:/listar";
+            return "carrito";
         }
 
     }

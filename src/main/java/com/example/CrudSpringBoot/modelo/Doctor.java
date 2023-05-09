@@ -3,11 +3,15 @@ package com.example.CrudSpringBoot.modelo;
 import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonAnyGetter;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "Veterinario")
 public class Doctor {
@@ -18,20 +22,11 @@ public class Doctor {
     private String FullName;
     private int CC;
 
-    private boolean existe;
 
-    //constructor
 
-    public Doctor(long id, String fullName, int CC, boolean existe) {
-        this.id = id;
-        this.FullName = fullName;
-        this.CC = CC;
-        this.existe = existe;
-    }
 
-    public Doctor() {
-        super();
-    }
+
+
 
 
 }

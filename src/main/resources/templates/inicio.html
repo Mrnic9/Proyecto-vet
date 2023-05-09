@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https//www.thymeleaft.org">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,7 +17,7 @@
   </div>
 
   <nav class="navbar">
-    <a href="registro.html">Registro</a>
+    <a th:href="@{/new}">Registro</a>
     <a href="consulta.html">consulta</a>
     <a href="inventario.html">Inventario</a>
     <a href="carrito.html">Productos</a>

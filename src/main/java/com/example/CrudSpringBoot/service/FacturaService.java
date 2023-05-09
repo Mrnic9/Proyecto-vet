@@ -1,8 +1,5 @@
 package com.example.CrudSpringBoot.service;
 
-import com.example.CrudSpringBoot.interfaceService.IFacturaService;
-import com.example.CrudSpringBoot.interfaces.IFactura;
-import com.example.CrudSpringBoot.modelo.Factura;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

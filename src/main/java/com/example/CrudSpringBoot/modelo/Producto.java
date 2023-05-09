@@ -1,18 +1,22 @@
 package com.example.CrudSpringBoot.modelo;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "Producto")
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id")
+    @Column(name = "id")
     long id;
     private int id_producto;
     private String descripcion;
@@ -21,18 +25,4 @@ public class Producto {
     private int existencia;
     private boolean existe;
 
-    //contructors
-    public Producto( long id ,int id_producto, String descripcion, String categoria, double precio,  int existencia) {
-        this.id_producto = id_producto;
-        this.descripcion = descripcion;
-        this.categoria = categoria;
-        this.precio = precio;
-        this.existencia = existencia;
-        this.existe = true;
-        this.id=id;
-    }
-
-    public Producto() {
-        super();
-    }
 }

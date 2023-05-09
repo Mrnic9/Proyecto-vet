@@ -23,35 +23,30 @@ public class ControlerDoctor {
     private IDoctorService service;
 
 
-    @GetMapping("/listar")
+    @GetMapping("/listardoc")
     public String listar(Model model){
         List<Doctor> personas= service.listar();
         model.addAttribute("personas", personas);
-        return "index";
+        return "factura";
     }
 
     @GetMapping("/new")
     public String agregar(Model model){
         model.addAttribute("persona", new Doctor());
-        return "form";
+        return "factura";
     }
 
     @PostMapping("/save")
     public String save(@Validated Doctor p){
         service.save(p);
-        return "redirect:/listar";
+        return "factura";
     }
 
-    @GetMapping("/editar/{id}")
-    public String editar(@PathVariable int id, Model model){
-        Optional<Doctor> persona = service.listarId(id);
-        model.addAttribute("persona", persona);
-        return "form";
-    }
+
 
     @GetMapping("/eliminar/{id}")
     public String delete(@PathVariable int id){
         service.delete(id);
-        return "redirect:/listar";
+        return "factura";
     }
 }

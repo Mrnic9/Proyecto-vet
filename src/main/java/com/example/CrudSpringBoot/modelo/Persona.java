@@ -1,11 +1,15 @@
 package com.example.CrudSpringBoot.modelo;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 @Getter
 @Setter
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "persona")
 public class Persona {
@@ -16,17 +20,6 @@ public class Persona {
     private  String name;
     private  String telefono;
     private String email;
-
-    public Persona() {
-
-    }
-
-    public Persona(  long id,String name, String telefono, String email) {
-        this.id = id;
-        this.name = name;
-        this.telefono = telefono;
-        this.email=email;
-    }
 
 
 
